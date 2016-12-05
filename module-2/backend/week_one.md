@@ -54,12 +54,32 @@ Hyper Text Transfer Protocol
 
 
 15. What's an ORM?
+Object Relational Mapping: connects objects of an application to tables
 
 
 16. What's the most commonly used ORM?
+Active Record?
+
 17. Let's say we have an application with restaurants. There are seven verb + path combinations necessary to provide full CRUD functionality for our restaurant application. List each of the seven combinations, and explain what each is for.
+get '/' this would be the dashboard or default page
+get '/restaurants' this page has a list of all the restaurants
+get '/restaurant/new this lets the user create (and POST) a new restaurant.
+get '/restaurant/:id' this looks at the SPECIFIC restaurant, based on its ID
+get '/restaurant/:id/edit' this lets the user edit an existing restaurant
+put '/restaurant/:id' this path lets you overwrite your edited changes over the orginial properties.
+delete '/restaurant/:id' this path lets you delete a restaurant
+
 18. What's a migration? 
+It's when you create the ORM
+
 19. When you create a migration, does it automatically modify your database?
+no
+
 20. How does a model relate to a database?
+It inherits everything it needs from Active Record.
+
 21. What's the difference between agile workflow and waterfall method?
+Agile workflow is building one branch at a time. i.e. building /stations crud first and then doing trips and then doing conditions, etc. Waterfall is building everything from the ground up.
+
 22. What is the difference between `#new` and `#create`?
+new doesn't save the new instance. You would have to do Trip.new(blah blah).save. Create makes a new instance AND saves it.
